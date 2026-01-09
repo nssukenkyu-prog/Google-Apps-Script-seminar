@@ -1,0 +1,73 @@
+.scope {
+    background-color: var(--color-bg-base);
+}
+
+.scope-comparison {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.scope-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.can-do {
+    border-top: 5px solid var(--color-success);
+}
+
+.cannot-do {
+    border-top: 5px solid #9CA3AF;
+    background-color: #F9FAFB;
+}
+
+.scope-header {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.scope-list {
+    list-style: none;
+}
+
+.scope-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.can-do .scope-list li::before {
+    content: '✓';
+    color: var(--color-success);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.cannot-do .scope-list li::before {
+    content: '•';
+    color: #9CA3AF;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.scope-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 2rem;
+}

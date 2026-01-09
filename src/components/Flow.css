@@ -1,0 +1,77 @@
+.flow {
+    background-color: var(--color-bg-base);
+}
+
+.flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.step-card {
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    border: 1px solid #E5E7EB;
+    text-align: center;
+}
+
+.step-number {
+    background-color: var(--color-primary);
+    color: white;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 99px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text-main);
+}
+
+.step-content {
+    margin-bottom: 1rem;
+}
+
+.step-note {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.step-btn {
+    width: 100%;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.step-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.step-arrow {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: var(--color-primary-light);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    /* Keep vertical for flow clarity */
+}

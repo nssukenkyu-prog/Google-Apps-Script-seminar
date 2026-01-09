@@ -1,0 +1,34 @@
+.lecturers {
+    background-color: white;
+}
+
+.lecturers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.lecturer-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-subtle);
+    border-radius: 12px;
+    width: 280px;
+}
+
+.lecturer-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.lecturer-role {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.25rem;
+}
+
+.lecturer-univ {
+    font-weight: 500;
+}
