@@ -1,30 +1,30 @@
 import React from 'react';
+import { AlertTriangle, ArrowRight } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
     return (
         <section className="hero">
-            <div className="hero-overlay"></div>
+            <div className="hero-glow"></div>
             <div className="container hero-container">
                 <div className="hero-content">
-                    <span className="hero-tag">日本柔道整復接骨医学会 柔道整復学教育分科会 主催</span>
+                    <div className="hero-tag">
+                        <AlertTriangle className="tag-icon" size={18} /> まだ、手作業で消耗してるの？
+                    </div>
                     <h1 className="hero-title">
-                        「アイデアを形にする」<br />
-                        若手教員のための<br />
-                        <span className="text-accent">Google Apps Script</span>入門講座
+                        <span className="text-gradient">「アイデアを形にする」</span><br />
+                        <span className="text-white">若手教員のための<br />Google Apps Script入門講座</span>
                     </h1>
                     <p className="hero-subtitle">
                         ～明日からの業務が劇的に変わるアプリ開発体験～
                     </p>
                     <div className="hero-cta">
-                        <a href="https://buy.stripe.com/test_dummy" className="btn btn-primary btn-lg">
-                            講座に申し込む（¥3,000）
-                        </a>
-                        <p className="hero-note">※Stripe決済ページへ移動します</p>
+                        <button className="btn btn-primary btn-lg">
+                            今すぐ申し込む
+                            <ArrowRight className="btn-icon" size={24} />
+                        </button>
+                        <p className="hero-note">※ 先着20名限定 / 枠が埋まり次第終了</p>
                     </div>
-                </div>
-                <div className="hero-visual">
-                    {/* Image will be set via CSS background or img tag here */}
                 </div>
             </div>
         </section>

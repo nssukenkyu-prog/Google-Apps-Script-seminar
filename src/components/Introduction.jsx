@@ -1,36 +1,35 @@
 import React from 'react';
+import { HelpCircle, MessageCircle, Frown, ArrowDown } from 'lucide-react';
 import './Introduction.css';
 
 const Introduction = () => {
     return (
         <section className="intro section">
             <div className="container">
-
                 <div className="intro-cards-container">
-                    <div className="intro-card pain-card">
+                    <div className="glass-card intro-card pain-card">
                         <h3 className="card-title text-center">こんな悩みありませんか？</h3>
                         <ul className="pain-list">
                             <li>
-                                <span className="icon">🤔</span>
+                                <span className="icon"><HelpCircle size={32} color="var(--color-warning)" /></span>
                                 <p>教育DXと言われるが、<br />何から始めればいいかわからない</p>
                             </li>
                             <li>
-                                <span className="icon">💬</span>
+                                <span className="icon"><MessageCircle size={32} color="var(--color-warning)" /></span>
                                 <p>生成AIを使っているが、<br />チャットや文章作成以外に使いたい</p>
                             </li>
                             <li>
-                                <span className="icon">😫</span>
+                                <span className="icon"><Frown size={32} color="var(--color-warning)" /></span>
                                 <p>プログラミングは難しそうで<br />自分には無理だと思っている</p>
                             </li>
                         </ul>
                     </div>
 
                     <div className="connection-arrow">
-                        <span>⬇</span>
-                        <p>その悩み、<br /><strong>AI×プログラミング</strong>で解決します</p>
+                        <ArrowDown size={48} className="arrow-down-icon" />
                     </div>
 
-                    <div className="intro-card solution-card">
+                    <div className="glass-card intro-card solution-card">
                         <h3 className="card-title text-center text-primary">この講座の価値</h3>
                         <div className="solution-content">
                             <p className="main-message">
@@ -45,7 +44,6 @@ const Introduction = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     );

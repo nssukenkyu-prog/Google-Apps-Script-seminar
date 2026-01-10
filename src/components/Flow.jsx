@@ -1,18 +1,20 @@
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
 import './Flow.css';
 
 const Step = ({ number, title, content, note, link, linkText }) => (
-    <div className="step-card">
-        <div className="step-number">STEP {number}</div>
-        <h3 className="step-title">{title}</h3>
+    <div className="glass-card step-card">
+        <div className="step-header">
+            <div className="step-number">STEP {number}</div>
+            <h3 className="step-title">{title}</h3>
+        </div>
         <p className="step-content">{content}</p>
         {note && <p className="step-note">{note}</p>}
         {link && (
             <a href={link} target="_blank" rel="noreferrer" className="btn btn-outline step-btn">
-                {linkText}
+                {linkText} <ExternalLink size={16} style={{ marginLeft: '8px' }} />
             </a>
         )}
-        {number !== 3 && <div className="step-arrow">▼</div>}
     </div>
 );
 
@@ -30,6 +32,7 @@ const Flow = () => {
                         link="https://buy.stripe.com/test_dummy"
                         linkText="申し込み・決済へ進む"
                     />
+                    <div className="flow-connector"></div>
                     <Step
                         number={2}
                         title="アンケート回答【必須】"
@@ -38,6 +41,7 @@ const Flow = () => {
                         link="https://docs.google.com/forms/d/e/1FAIpQLSdzMuaQcz7XeyIJaKjyT5-rdiCIGSdEJiCWv8rhdVSueSLFxQ/viewform?usp=dialog"
                         linkText="アンケートに回答する"
                     />
+                    <div className="flow-connector"></div>
                     <Step
                         number={3}
                         title="申し込み完了"

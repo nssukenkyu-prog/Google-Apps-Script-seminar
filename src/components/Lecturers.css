@@ -1,5 +1,5 @@
 .lecturers {
-    background-color: white;
+    background: transparent;
 }
 
 .lecturers-grid {
@@ -7,28 +7,43 @@
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .lecturer-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 3rem 2rem;
     text-align: center;
-    padding: 2rem;
-    background: var(--color-bg-subtle);
-    border-radius: 12px;
-    width: 280px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.lecturer-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .lecturer-name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 800;
     margin-bottom: 0.5rem;
-    color: var(--color-primary);
+    color: var(--color-text-main);
+    letter-spacing: 0.05em;
 }
 
 .lecturer-role {
+    color: var(--color-primary);
+    font-weight: 700;
     font-size: 0.9rem;
-    color: var(--color-text-light);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .lecturer-univ {
-    font-weight: 500;
+    color: var(--color-text-light);
+    font-size: 0.85rem;
 }

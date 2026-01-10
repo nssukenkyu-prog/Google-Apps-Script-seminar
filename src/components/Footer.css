@@ -1,32 +1,38 @@
 .footer {
-    background-color: var(--color-primary);
+    background-color: #020202;
     color: white;
     padding: 4rem 0 2rem;
+    border-top: 1px solid #222;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 3rem;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .footer-org h3 {
-    font-size: 1.4rem;
-    line-height: 1.4;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
 }
 
 .footer-policy h4 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    opacity: 0.8;
+    color: var(--color-text-light);
+}
+
+.footer-policy p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
 }
 
 .footer-copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
-    font-size: 0.9rem;
-    opacity: 0.6;
+    border-top: 1px solid #111;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
 }

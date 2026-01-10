@@ -7,59 +7,83 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     position: relative;
 }
 
 .step-card {
     width: 100%;
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow-md);
+    /* glass-card class provides background */
+    padding: 2.5rem;
     position: relative;
-    border: 1px solid #E5E7EB;
     text-align: center;
+    z-index: 1;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .step-number {
-    background-color: var(--color-primary);
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-bg-base);
     display: inline-block;
-    padding: 0.25rem 1rem;
-    border-radius: 99px;
-    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 800;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
 }
 
 .step-title {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 0;
     color: var(--color-text-main);
+    flex: 1;
 }
 
 .step-content {
+    color: var(--color-text-light);
     margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--color-border);
 }
 
 .step-note {
-    font-size: 0.85rem;
-    color: var(--color-text-light);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
     margin-bottom: 1.5rem;
 }
 
 .step-btn {
     width: 100%;
-    border: 2px solid var(--color-primary);
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--color-primary);
     color: var(--color-primary);
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
 .step-btn:hover {
-    background-color: var(--color-primary);
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-bg-base);
+}
+
+.flow-connector {
+    height: 3rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), #333);
+    margin: 0 auto;
 }
 
 .step-arrow {

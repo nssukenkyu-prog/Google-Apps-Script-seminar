@@ -2,7 +2,7 @@ import React from 'react';
 import './Program.css';
 
 const ProgramItem = ({ time, title, description }) => (
-    <div className="program-item">
+    <div className="glass-card program-item">
         <div className="program-time">{time}</div>
         <div className="program-content">
             <h3 className="program-title">{title}</h3>

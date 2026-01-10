@@ -2,7 +2,7 @@ import React from 'react';
 import './Lecturers.css';
 
 const LecturerCard = ({ name, role, university }) => (
-    <div className="lecturer-card">
+    <div className="glass-card lecturer-card">
         <div className="lecturer-info">
             <h3 className="lecturer-name">{name}</h3>
             <p className="lecturer-role">{role}</p>
