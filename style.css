@@ -302,8 +302,93 @@ ul {
 
 /* Sections */
 .section {
-    padding: 120px 0;
+    padding: 80px 0;
+    /* Reduced from 120px */
 }
+
+/* ... */
+
+.hero-label {
+    /* ... existing styles ... */
+    margin-bottom: 30px;
+    /* Reduced from 25px? No user wanted tighter. Let's make it more visually balanced with title */
+    /* Wait, user said theme space is weird. The label is above the title. */
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    /* ... */
+    margin-bottom: 30px;
+}
+
+/* ... */
+
+/* Sticky Footer CTA */
+.sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(5, 5, 16, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    z-index: 999;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.5s ease-out;
+}
+
+.sticky-cta .btn {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Adjustment for content not to be hidden behind sticky footer */
+body {
+    padding-bottom: 80px;
+}
+
+/* Hide Sticky CTA on very top if needed, or keeping it always visible as requested "page top from also scroll event always".
+   User said: "page top from even if scroll do always screen bottom at like can do?"
+   -> "Can you make it so it's always at the bottom of the screen, even from the page top?"
+   Yes, fixed position does exactly this.
+*/
+
+/* Mobile tweak for sticky cta */
+@media (max-width: 768px) {
+    .sticky-cta {
+        padding: 10px 15px;
+    }
+
+    .sticky-cta .btn {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Make the original CTA section buttons smaller or hide them if redundant? 
+       No, keep them.
+    */
+}
+
 
 .section-title {
     font-size: 2.5rem;
