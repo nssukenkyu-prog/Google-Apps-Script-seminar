@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 
 <body>
@@ -25,8 +26,7 @@
                 <a href="#about">About</a>
                 <a href="#program">Program</a>
                 <a href="#details">Details</a>
-                <a href="https://peatix.com/sales/event/4804280/tickets" class="btn btn-primary"
-                    target="_blank">お申し込み</a>
+                <a href="#details" class="btn btn-primary">お申し込み</a>
             </nav>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <span></span>
@@ -126,7 +126,10 @@
                         <div class="detail-row">
                             <dt>申込・支払</dt>
                             <dd>
-                                専用Webページ（Stripe決済）<br>
+                                <stripe-buy-button buy-button-id="buy_btn_1SpLgCJaUAm82QMVFg50Nszm"
+                                    publishable-key="pk_live_51SndAhJaUAm82QMVL7KxOAsNTXIAem2S3vGuPxtpTsX8lXvSs12TODdJ2v4HDpGus3MisKa8MwjIPdFhsUGAiFRi0066LN8772">
+                                </stripe-buy-button>
+                                <br>
                                 <small class="text-muted">※決済完了後にGoogleフォームにて詳細アンケートに回答して完了</small>
                             </dd>
                         </div>
@@ -445,15 +448,17 @@
         <!-- CTA section removed from main flow as Sticky CTA covers it, or keep for bottom? Let's keep a footer CTA block -->
         <section class="section" style="text-align: center; padding-bottom: 150px;">
             <h2 class="hero-title" style="font-size: 3rem;">アイデアを、現実に。</h2>
-            <a href="https://peatix.com/sales/event/4804280/tickets" class="btn btn-primary btn-xl"
-                target="_blank">今すぐ申し込む</a>
+            <div style="margin-top: 30px;">
+                <stripe-buy-button buy-button-id="buy_btn_1SpLgCJaUAm82QMVFg50Nszm"
+                    publishable-key="pk_live_51SndAhJaUAm82QMVL7KxOAsNTXIAem2S3vGuPxtpTsX8lXvSs12TODdJ2v4HDpGus3MisKa8MwjIPdFhsUGAiFRi0066LN8772">
+                </stripe-buy-button>
+            </div>
         </section>
 
     </main>
 
     <div class="sticky-cta">
-        <a href="https://peatix.com/sales/event/4804280/tickets" class="btn btn-primary btn-block"
-            target="_blank">今すぐ申し込む (Peatix)</a>
+        <a href="#details" class="btn btn-primary btn-block">今すぐ申し込む</a>
     </div>
 
     <footer class="footer"
