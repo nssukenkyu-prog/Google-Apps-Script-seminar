@@ -512,6 +512,84 @@ h4 {
     transition-delay: 0.1s;
 }
 
-.delay-200 {
-    transition-delay: 0.2s;
+
+/* --- Solutions Section --- */
+.solution-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.solution-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.badge {
+    background: rgba(0, 243, 255, 0.1);
+    color: var(--accent-cyan);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--accent-cyan);
+}
+
+.problem-box, .solution-box {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.problem-box {
+    background: rgba(255, 80, 80, 0.1);
+    border-left: 3px solid #ff5050;
+}
+
+.problem-box strong {
+    color: #ff5050;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.solution-box {
+    background: rgba(0, 255, 128, 0.1);
+    border-left: 3px solid #00ff80;
+}
+
+.solution-box strong {
+    color: #00ff80;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.solution-image-placeholder {
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.glass-card:hover .solution-image-placeholder {
+    background: rgba(0,0,0,0.5) !important;
+}
+
+/* --- Program Detailed Schedule --- */
+.timeline-detail {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-detail h4 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.timeline-detail p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
