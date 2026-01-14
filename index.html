@@ -23,9 +23,9 @@
         <div class="container header-container">
             <div class="logo"></div>
             <nav class="nav">
-                <a href="#about">About</a>
-                <a href="#program">Program</a>
-                <a href="#details">Details</a>
+                <a href="#about">コンセプト</a>
+                <a href="#program">プログラム</a>
+                <a href="#details">開催概要</a>
                 <a href="#details" class="btn btn-primary">お申し込み</a>
             </nav>
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -43,7 +43,7 @@
                     <span class="text-gradient">アイデアを</span>
                     <span class="text-white">形にする。</span>
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle text-white">
                     教員のためのGoogle Apps Script入門講座<br>
                     <span class="text-cyan">ー 明日からの業務を劇的に変えるアプリ開発・実装講座 ー</span>
                 </p>
@@ -158,25 +158,45 @@
         <section id="target" class="section section-alt">
             <div class="container">
                 <h2 class="section-title text-center">こんな方におすすめ</h2>
-                <div class="glass-card fade-up" style="max-width: 800px; margin: 0 auto;">
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>Googleフォームで集めた実習日誌や小テストの採点・集計作業を、手作業で行っている方</span>
-                        </li>
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>スプレッドシートで管理している学生の成績や出席状況を、ボタン一つで本人にメール送信・PDF化したい方</span>
-                        </li>
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>生成AIを「チャット」だけでなく、大量の記述回答（ポートフォリオや実習記録）を自動化したい方</span>
-                        </li>
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>プログラミングには興味があるが、黒い画面（コマンド操作）や難しい環境構築で挫折した経験がある方</span>
-                        </li>
-                    </ul>
+                <h2 class="section-title text-center">こんな方におすすめ</h2>
+
+                <div class="grid-2" style="gap: 30px;">
+                    <!-- Target 1 -->
+                    <div class="glass-card fade-up" style="padding: 30px; border-left: 4px solid var(--accent-cyan);">
+                        <div style="font-size: 2.5rem; margin-bottom: 15px;">🤖</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">AI活用が止まっている</h3>
+                        <p class="text-muted">生成AIを使っているけど、チャットや文章作成だけで終わっている</p>
+                    </div>
+
+                    <!-- Target 2 -->
+                    <div class="glass-card fade-up delay-100"
+                        style="padding: 30px; border-left: 4px solid var(--accent-magenta);">
+                        <div style="font-size: 2.5rem; margin-bottom: 15px;">💻</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">プログラミングへの不安</h3>
+                        <p class="text-muted">プログラミングに興味はあるけど、難しそうで手が出せない</p>
+                    </div>
+
+                    <!-- Target 3 -->
+                    <div class="glass-card fade-up delay-200"
+                        style="padding: 30px; border-left: 4px solid var(--accent-blue);">
+                        <div style="font-size: 2.5rem; margin-bottom: 15px;">🛠️</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">既存ツールの限界</h3>
+                        <p class="text-muted">業務改善したいけど、既存ツールでは痒いところに手が届かない</p>
+                    </div>
+
+                    <!-- Target 4 -->
+                    <div class="glass-card fade-up delay-300" style="padding: 30px; border-left: 4px solid #00ff80;">
+                        <div style="font-size: 2.5rem; margin-bottom: 15px;">🚀</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">DX推進の壁</h3>
+                        <p class="text-muted">教育現場のDXを推進したいが、何から始めればいいかわからない</p>
+                    </div>
+                </div>
+
+                <div class="fade-up delay-300" style="margin-top: 50px; text-align: center;">
+                    <h3 class="text-white" style="font-size: 1.5rem; line-height: 1.6;">
+                        <span class="text-gradient">→ そんなあなたのための、</span><br>
+                        たった4時間で「動くWebアプリ」を作る実践講座です！
+                    </h3>
                 </div>
             </div>
         </section>
@@ -482,7 +502,14 @@
     </div>
 
     <footer class="footer"
-        style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05);">
+        style="text-align: center; padding: 60px 40px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05);">
+
+        <div class="footer-contact" style="margin-bottom: 30px;">
+            <p style="font-weight: 700; color: white; margin-bottom: 10px;">お問い合わせ</p>
+            <p>日本柔道整復接骨医学会 柔道整復学教育分科委員会 事務局</p>
+            <p>祁答院 隼人 <a href="mailto:jsrm.jt.edu@gmail.com"
+                    style="color: var(--accent-cyan); text-decoration: none;">(jsrm.jt.edu@gmail.com)</a></p>
+        </div>
 
         <script src="script.js"></script>
 </body>

@@ -2,7 +2,8 @@
     --bg-dark: #02020a;
     --bg-panel: #0a0a16;
     --text-main: #ffffff;
-    --text-muted: #94a3b8;
+    --text-muted: #dbeafe;
+    /* Lightened from #94a3b8 for better visibility */
 
     --accent-cyan: #00f3ff;
     --accent-magenta: #da77f2;
