@@ -537,7 +537,8 @@ h4 {
     border: 1px solid var(--accent-cyan);
 }
 
-.problem-box, .solution-box {
+.problem-box,
+.solution-box {
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -572,7 +573,7 @@ h4 {
 }
 
 .glass-card:hover .solution-image-placeholder {
-    background: rgba(0,0,0,0.5) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
 }
 
 /* --- Program Detailed Schedule --- */
@@ -592,4 +593,209 @@ h4 {
 .timeline-detail p {
     font-size: 0.9rem;
     color: var(--text-muted);
+}
+
+/* --- New 3-Column Grid for Lecturers --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Redesigned Program Timeline --- */
+.program-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.program-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--accent-blue), var(--accent-magenta), transparent);
+}
+
+.program-card {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.program-time {
+    min-width: 120px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--accent-cyan);
+    padding-top: 5px;
+    text-align: right;
+    position: relative;
+}
+
+.program-time::after {
+    content: '';
+    position: absolute;
+    right: -36px;
+    /* Adjust based on gap + line positioning */
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-dark);
+    border: 2px solid var(--accent-cyan);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.program-content {
+    flex: 1;
+    background: rgba(10, 10, 22, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.program-content:hover {
+    background: rgba(10, 10, 22, 0.8);
+    border-color: var(--accent-blue);
+    transform: translateX(5px);
+}
+
+.program-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.badge-intro {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-step1 {
+    background: rgba(0, 243, 255, 0.1);
+    color: var(--accent-cyan);
+    border: 1px solid var(--accent-cyan);
+}
+
+.badge-step2 {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+}
+
+.badge-summary {
+    background: rgba(218, 119, 242, 0.1);
+    color: var(--accent-magenta);
+    border: 1px solid var(--accent-magenta);
+}
+
+.program-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.program-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.program-list li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.program-list li::before {
+    content: "•";
+    color: var(--accent-cyan);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Step Process Flow for Step 2 */
+.step-process {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.step-item {
+    flex: 1;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.step-num {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.step-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .program-timeline::before {
+        left: 10px;
+    }
+
+    .program-card {
+        flex-direction: column;
+        padding-left: 30px;
+        gap: 10px;
+    }
+
+    .program-time {
+        text-align: left;
+        min-width: auto;
+        padding-left: 0;
+    }
+
+    .program-time::after {
+        left: -25px;
+        right: auto;
+        top: 6px;
+    }
+
+    .step-process {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+    }
 }

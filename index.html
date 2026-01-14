@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -63,10 +63,10 @@
 
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title"><span class="text-gradient">コンセプト</span></h2>
                 <div class="grid-2">
                     <div class="glass-card fade-up">
-                        <h3><span class="number">01</span> 企画の趣旨・背景</h3>
+                        <h2 class="section-title text-start" style="font-size: 1.8rem; margin-bottom: 20px;"><span
+                                class="text-gradient">企画の趣旨・背景</span></h2>
                         <p>
                             教育現場におけるDX（デジタルトランスフォーメーション）が叫ばれる中，これからの柔道整復学教育を担う教員には，
                             既存のツールを使うだけでなく，自らのアイデアで業務を改善する<strong class="text-cyan">「開発力」</strong>が求められています。<br><br>
@@ -76,7 +76,8 @@
                         </p>
                     </div>
                     <div class="glass-card fade-up delay-100">
-                        <h3><span class="number">02</span> 企画の目的</h3>
+                        <h2 class="section-title text-start" style="font-size: 1.8rem; margin-bottom: 20px;"><span
+                                class="text-gradient">企画の目的</span></h2>
                         <ul class="feature-list">
                             <li>
                                 <strong>AI活用のステージアップ</strong>
@@ -126,11 +127,12 @@
                         <div class="detail-row">
                             <dt>申込・支払</dt>
                             <dd>
-                                <stripe-buy-button buy-button-id="buy_btn_1SpLgCJaUAm82QMVFg50Nszm"
-                                    publishable-key="pk_live_51SndAhJaUAm82QMVL7KxOAsNTXIAem2S3vGuPxtpTsX8lXvSs12TODdJ2v4HDpGus3MisKa8MwjIPdFhsUGAiFRi0066LN8772">
-                                </stripe-buy-button>
+                            <dd>
+                                <a href="https://buy.stripe.com/eVq4gAf3N1pH4NS1XD5Vu01" class="btn btn-primary"
+                                    target="_blank" style="width: 100%; text-align: center;">お申し込み (Stripe決済)</a>
                                 <br>
                                 <small class="text-muted">※決済完了後にGoogleフォームにて詳細アンケートに回答して完了</small>
+                            </dd>
                             </dd>
                         </div>
                         <div class="detail-row">
@@ -151,11 +153,37 @@
             </div>
         </section>
 
-        <section id="solutions" class="section section-alt">
+
+
+        <section id="target" class="section section-alt">
             <div class="container">
-                <h2 class="section-title text-center"><span class="text-gradient">本講座で学べる課題解決と実装例</span>
-                </h2>
-                <p class="section-subtitle text-center text-muted" style="margin-bottom: 50px;">本講座で解決できる課題と実装例</p>
+                <h2 class="section-title text-center">こんな方におすすめ</h2>
+                <div class="glass-card fade-up" style="max-width: 800px; margin: 0 auto;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
+                            <span>Googleフォームで集めた実習日誌や小テストの採点・集計作業を、手作業で行っている方</span>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
+                            <span>スプレッドシートで管理している学生の成績や出席状況を、ボタン一つで本人にメール送信・PDF化したい方</span>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
+                            <span>生成AIを「チャット」だけでなく、大量の記述回答（ポートフォリオや実習記録）を自動化したい方</span>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
+                            <span>プログラミングには興味があるが、黒い画面（コマンド操作）や難しい環境構築で挫折した経験がある方</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="section">
+            <div class="container">
+                <h2 class="section-title text-center"><span class="text-gradient">本講座で学べる課題解決と実装例</span></h2>
 
                 <div class="grid-2">
                     <!-- Item 1 -->
@@ -294,91 +322,82 @@
             </div>
         </section>
 
-        <section id="target" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title text-center">こんな方におすすめ</h2>
-                <div class="glass-card fade-up" style="max-width: 800px; margin: 0 auto;">
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>Googleフォームで集めた実習日誌や小テストの採点・集計作業を、手作業で行っている方</span>
-                        </li>
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>スプレッドシートで管理している学生の成績や出席状況を、ボタン一つで本人にメール送信・PDF化したい方</span>
-                        </li>
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>生成AIを「チャット」だけでなく、大量の記述回答（ポートフォリオや実習記録）を自動化したい方</span>
-                        </li>
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
-                            <span style="font-size: 1.5rem; line-height: 1;">✅</span>
-                            <span>プログラミングには興味があるが、黒い画面（コマンド操作）や難しい環境構築で挫折した経験がある方</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <div class="visual-separator" style="background-image: url('assets/images/coding_flow.png');"></div>
 
-        <section id="program" class="section">
+        <section id="program" class="section section-alt">
             <div class="container">
                 <h2 class="section-title">当日のプログラム</h2>
-                <p style="margin-bottom: 50px; color: var(--text-muted);">座学は最小限。実際に手を動かす「実践型」の4時間。</p>
+                <div class="glass-card fade-up" style="margin-bottom: 40px;">
+                    <p style="text-align: center; font-size: 1.1rem;">
+                        座学は最小限。<br>
+                        <strong>「実際に手を動かして作り上げる」</strong>ことに特化した4時間集中プログラム。
+                    </p>
+                </div>
 
-                <div style="max-width: 800px; margin: 0 auto; position: relative; padding-left: 20px;">
-                    <!-- Intro -->
-                    <div class="timeline-item fade-up">
-                        <span class="time">Intro (20 min)</span>
-                        <h3>導入：教育DXの真の目的</h3>
-                        <div class="timeline-detail">
-                            <h4>教育DXとは</h4>
-                            <p>既存ツールに合わせるのではなく、「教員の指導知見」をシステム化し、学生と向き合う時間を創出することと定義します。</p>
-                            <h4>GASの役割（仕組みの視覚化）</h4>
-                            <p>Google Apps Scriptをツール間の「接着剤」として捉え、プログラミングの論理構造を視覚的に理解します。</p>
+                <div class="program-timeline">
+                    <!-- Phase 1 -->
+                    <div class="program-card fade-up">
+                        <div class="program-time">13:00 - 13:20</div>
+                        <div class="program-content">
+                            <span class="program-badge badge-intro">Intro</span>
+                            <h3>導入：教育DXの真の目的</h3>
+                            <ul class="program-list">
+                                <li><strong>教育DXの再定義</strong>：既存ツールの導入ではなく、「教員の指導知見（暗黙知）」をシステム化するプロセス</li>
+                                <li><strong>GASの役割</strong>：ツール間を繋ぐ「接着剤」としてのプログラミング論理構造の視覚化</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- Step 1 -->
-                    <div class="timeline-item fade-up">
-                        <span class="time">Step 1 (60 min)</span>
-                        <h3>演習：基礎編「標準操作手順」の習得</h3>
-                        <div class="timeline-detail">
-                            <h4>成功パターンのトレース</h4>
-                            <p>「シート情報を取得しメール送信」する完成済みコードを使用し、動く楽しさを体験します。</p>
-                            <h4>基本操作の完遂</h4>
-                            <p>「エディタを開く」「コード貼付」「権限承認」という、全アプリ共通の基本操作を確実にマスターします。</p>
+                    <!-- Phase 2 -->
+                    <div class="program-card fade-up">
+                        <div class="program-time">13:20 - 14:20</div>
+                        <div class="program-content">
+                            <span class="program-badge badge-step1">Step 1</span>
+                            <h3>演習：基礎編「標準操作手順」の習得</h3>
+                            <p class="text-muted">全アプリ共通の「勝ちパターン」を身体で覚える60分</p>
+                            <ul class="program-list">
+                                <li>成功パターンのトレース（コピペで動く体験）</li>
+                                <li>エディタ起動・コード貼付・権限承認の完全マスター</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- Step 2 -->
-                    <div class="timeline-item fade-up">
-                        <span class="time">Step 2 (120 min)</span>
-                        <h3 class="text-cyan">演習：実践アプリ構築</h3>
-                        <p class="text-muted">事前アンケートで収集した個々の課題を、以下の3ステップで具現化します。</p>
-
-                        <div class="timeline-detail">
-                            <h4>Step 1：設計図（ロジック）の確認</h4>
-                            <p>「もし～ならば」「～を繰り返す」といった教育者の判断をプログラムの論理として再確認します。</p>
-
-                            <h4>Step 2：生成AIへの指示とコード生成</h4>
-                            <p>設計図をAI（Gemini/ChatGPT）に提示し、実行可能なコードを出力させる「プロンプト作成技術」を実践します。</p>
-
-                            <h4>Step 3：実装・テスト・トラブル対応</h4>
-                            <p>エラー発生時も「AIに伝えて修正案を仰ぐ」という自走可能なワークフローを習得します。</p>
+                    <!-- Phase 3 -->
+                    <div class="program-card fade-up">
+                        <div class="program-time">14:30 - 16:30</div>
+                        <div class="program-content">
+                            <span class="program-badge badge-step2">Step 2</span>
+                            <h3>演習：実践アプリ構築（本丸）</h3>
+                            <p class="text-muted">「欲しい」を形にするAIペアプログラミング実践</p>
+                            <div class="step-process">
+                                <div class="step-item">
+                                    <span class="step-num">01</span>
+                                    <span><strong>設計図（ロジック）</strong><br>教育的判断の言語化</span>
+                                </div>
+                                <div class="step-arrow">→</div>
+                                <div class="step-item">
+                                    <span class="step-num">02</span>
+                                    <span><strong>AI指示（プロンプト）</strong><br>具体的指示の作成</span>
+                                </div>
+                                <div class="step-arrow">→</div>
+                                <div class="step-item">
+                                    <span class="step-num">03</span>
+                                    <span><strong>実装・修正</strong><br>エラー解決フロー</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Outro -->
-                    <div class="timeline-item fade-up">
-                        <span class="time">Summary (20 min)</span>
-                        <h3>まとめ：成果の共有と今後の展望</h3>
-                        <div class="timeline-detail">
-                            <h4>実装成果の動作確認</h4>
-                            <p>構築したツールのデモを行い、業務改善効果を具体的にイメージします。</p>
-                            <h4>共有知としての展開</h4>
-                            <p>作成したツールやプロンプトを「教育資産」として組織内で共有する視点を持ちます。</p>
+                    <!-- Phase 4 -->
+                    <div class="program-card fade-up">
+                        <div class="program-time">16:30 - 16:50</div>
+                        <div class="program-content">
+                            <span class="program-badge badge-summary">Summary</span>
+                            <h3>成果発表・今後の展望</h3>
+                            <ul class="program-list">
+                                <li>作成したツールのデモと相互評価</li>
+                                <li>「教育資産」としてのプロンプト共有方法</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -431,15 +450,17 @@
         <section id="lecturers" class="section">
             <div class="container">
                 <h2 class="section-title text-center">講師紹介</h2>
-                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <div class="grid-3" style="margin-top: 30px;">
                     <div class="glass-card fade-up">
                         <h3 class="text-cyan" style="margin-bottom: 10px;">祁答院 隼人</h3>
-                        <p class="text-muted">日本体育大学 / 柔道整復学教育分科委員会 代表</p>
-                        <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
-                        <h3 class="text-white" style="font-size: 1.2rem; margin-bottom: 5px;">伊藤 譲</h3>
+                        <p class="text-muted" style="font-size: 0.9rem;">日本体育大学<br>柔道整復学教育分科委員会 代表</p>
+                    </div>
+                    <div class="glass-card fade-up delay-100">
+                        <h3 class="text-white" style="margin-bottom: 10px;">伊藤 譲</h3>
                         <p class="text-muted" style="font-size: 0.9rem;">日本体育大学</p>
-                        <div style="margin-top: 15px;"></div>
-                        <h3 class="text-white" style="font-size: 1.2rem; margin-bottom: 5px;">杉澤 舜</h3>
+                    </div>
+                    <div class="glass-card fade-up delay-200">
+                        <h3 class="text-white" style="margin-bottom: 10px;">杉澤 舜</h3>
                         <p class="text-muted" style="font-size: 0.9rem;">日本体育大学</p>
                     </div>
                 </div>
@@ -449,9 +470,8 @@
         <section class="section" style="text-align: center; padding-bottom: 150px;">
             <h2 class="hero-title" style="font-size: 3rem;">アイデアを、現実に。</h2>
             <div style="margin-top: 30px;">
-                <stripe-buy-button buy-button-id="buy_btn_1SpLgCJaUAm82QMVFg50Nszm"
-                    publishable-key="pk_live_51SndAhJaUAm82QMVL7KxOAsNTXIAem2S3vGuPxtpTsX8lXvSs12TODdJ2v4HDpGus3MisKa8MwjIPdFhsUGAiFRi0066LN8772">
-                </stripe-buy-button>
+                <a href="https://buy.stripe.com/eVq4gAf3N1pH4NS1XD5Vu01" class="btn btn-primary btn-xl"
+                    target="_blank">今すぐ申し込む (Stripe決済)</a>
             </div>
         </section>
 
