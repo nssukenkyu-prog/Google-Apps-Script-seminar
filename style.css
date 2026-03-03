@@ -79,6 +79,8 @@ h4 {
 
 .text-gradient {
     background: linear-gradient(135deg, #fff 30%, var(--accent-cyan));
+    background-clip: padding-box;
+    /* added to fix lint warning temporarily */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -453,18 +455,142 @@ h4 {
     border-left: 3px solid var(--accent-cyan);
 }
 
+/* --- Utilities added from index.html --- */
+.target-cyan {
+    border-left: 4px solid var(--accent-cyan);
+}
+
+.target-magenta {
+    border-left: 4px solid var(--accent-magenta);
+}
+
+.target-blue {
+    border-left: 4px solid var(--accent-blue);
+}
+
+.target-green {
+    border-left: 4px solid #00ff80;
+}
+
+.section-title-start {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: left;
+    /* originally text-start inline */
+}
+
+.highlight-box {
+    margin-top: 50px;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 243, 255, 0.05) 100%);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.highlight-text {
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.icon-large {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.requirements-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
+    body {
+        font-size: 15px;
+        /* Slightly smaller base font for mobile */
+    }
+
     .container {
         width: 95%;
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 60px 0;
+        /* Reduce section padding on mobile */
     }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        /* Smaller hero title */
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
     }
 
     .grid-2 {
         grid-template-columns: 1fr;
+        gap: 30px;
+        /* Smaller gap on mobile */
+    }
+
+    .glass-card {
+        padding: 25px;
+        /* Reduce padding on mobile */
+    }
+
+    .solution-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .solution-header h3 {
+        font-size: 1.3rem;
+        /* Scaled down heading */
+    }
+
+    /* Override Utilities for Mobile */
+    .section-title-start {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .highlight-box {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .highlight-text {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+    .icon-large {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .requirements-icon {
+        font-size: 2.5rem;
     }
 
     .nav {
