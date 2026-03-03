@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const headerOffset = 80;
@@ -62,6 +62,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
+            }
+        });
+    });
+
+    // --- Accordion for Solutions ---
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const card = header.closest('.accordion-card');
+            const icon = header.querySelector('.accordion-icon');
+
+            // Toggle active class
+            const isActive = card.classList.contains('active');
+
+            // Close all other accordions (Optional depending on design preference, here we just toggle the clicked one)
+            /* document.querySelectorAll('.accordion-card').forEach(c => {
+                c.classList.remove('active');
+                const i = c.querySelector('.accordion-icon');
+                if(i) i.textContent = '▼';
+            }); */
+
+            if (!isActive) {
+                card.classList.add('active');
+                if (icon) icon.textContent = '▲';
+            } else {
+                card.classList.remove('active');
+                if (icon) icon.textContent = '▼';
             }
         });
     });
